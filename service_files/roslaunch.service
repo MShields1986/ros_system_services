@@ -4,7 +4,8 @@ After=network-online.target roscore.service
 
 [Service]
 Type=simple
-User=your_robots_user
+# User=your_robots_user
+User=matthew
 ExecStart=/usr/sbin/ros_package_auto_launch
 
 [Install]

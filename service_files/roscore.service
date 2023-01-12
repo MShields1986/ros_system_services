@@ -4,8 +4,10 @@ After=network-online.target
 
 [Service]
 Type=forking
-User=your_robots_user
-ExecStart=/bin/sh -c ". /opt/ros/your_ros_distro/setup.sh; . /etc/ros/env.sh; roscore & while ! echo exit | nc localhost 11311 > /dev/null; do sleep 1; done"
+# User=your_robots_user
+User=matthew
+# ExecStart=/bin/sh -c ". /opt/ros/your_ros_distro/setup.sh; . /etc/ros/env.sh; roscore & while ! echo exit | nc localhost 11311 > /dev/null; do sleep 1; done"
+ExecStart=/bin/sh -c ". /opt/ros/noetic/setup.sh; . /etc/ros/env.sh; roscore & while ! echo exit | nc localhost 11311 > /dev/null; do sleep 1; done"
 
 [Install]
 WantedBy=multi-user.target

@@ -1,11 +1,13 @@
 #!/bin/bash
-source /path/to/your/catkin_ws/devel/setup.bash
+# source /path/to/your/catkin_ws/devel/setup.bash
+source /home/matthew/ros/catkin_ws/devel/setup.bash
 
 source /etc/ros/env.sh
 
-export ROS_HOME=$(echo ~your_robots_user)/.ros
+# export ROS_HOME=$(echo ~your_robots_user)/.ros
+export ROS_HOME=$(echo ~matthew)/.ros
 
-roslaunch your_ros_package init.launch --wait
+roslaunch ros_package init.launch --wait
 
 # Operation Canceled
 exit 125
