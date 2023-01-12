@@ -12,9 +12,18 @@ Edit the following files with entries for your own environment username.
 Depending on your deployment architecture you may also need to update the env.sh file.
 
 ### Installation
+Running the install.sh file will allocate the files to the correct locations with appropriate permissions. It will also enable the services so that they will run on boot, however it will not start them for your current working session, see below for that.
 ```shell
 . ./install.sh
 ```
+
+### Use
+To start the system services for the current session use the following two commands.
+```shell
+sudo systemctl start roscore.service
+sudo systemctl start ros_package.service
+```
+
 
 ### Troubleshooting
 You can check the service units are running with either of the following:
